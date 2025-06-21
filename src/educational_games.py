@@ -3,7 +3,6 @@ Educational Physics Games using Pygame
 Interactive games to help students understand physics concepts
 """
 
-import pygame
 import numpy as np
 import math
 import random
@@ -14,8 +13,78 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_agg import FigureCanvasAgg
 import time
 
-# Initialize pygame
-pygame.init()
+# Try to import pygame, with fallback for cloud environments
+try:
+    import pygame
+    pygame.init()
+    PYGAME_AVAILABLE = True
+except (ImportError, pygame.error):
+    PYGAME_AVAILABLE = False
+    # Create a mock pygame module for cloud compatibility
+    class MockPygame:
+        def __init__(self):
+            pass
+        
+        def Surface(self, size):
+            return MockSurface(size)
+        
+        def Clock(self):
+            return MockClock()
+        
+        def time(self):
+            return self
+        
+        def get_size(self):
+            return (800, 600)
+        
+        def tostring(self, surface, format):
+            return b''
+        
+        class font:
+            @staticmethod
+            def Font(name, size):
+                return MockFont()
+        
+        class image:
+            @staticmethod
+            def tostring(surface, format):
+                return b''
+        
+        class draw:
+            @staticmethod
+            def circle(surface, color, pos, radius, width=0):
+                pass
+            
+            @staticmethod
+            def lines(surface, color, closed, points, width=1):
+                pass
+            
+            @staticmethod
+            def rect(surface, color, rect):
+                pass
+    
+    class MockSurface:
+        def __init__(self, size):
+            self.size = size
+        
+        def fill(self, color):
+            pass
+        
+        def blit(self, surface, pos):
+            pass
+        
+        def get_size(self):
+            return self.size
+    
+    class MockClock:
+        def tick(self, fps):
+            pass
+    
+    class MockFont:
+        def render(self, text, antialias, color):
+            return MockSurface((100, 20))
+    
+    pygame = MockPygame()
 
 class GravityDropGame:
     """

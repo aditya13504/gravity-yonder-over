@@ -9,12 +9,32 @@ import time
 import threading
 from typing import Dict, Any, Optional
 import json
-from src.educational_games import GameManager
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.animation import FuncAnimation
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
+
+# Try to import game manager with fallback
+try:
+    from src.educational_games import GameManager, PYGAME_AVAILABLE
+except ImportError:
+    PYGAME_AVAILABLE = False
+    # Fallback GameManager for cloud environments
+    class GameManager:
+        def __init__(self):
+            self.games = {}
+        
+        def get_game_info(self, game_name):
+            return {
+                'name': 'Educational Game (Demo Mode)',
+                'description': 'Game temporarily unavailable in cloud mode',
+                'controls': 'Interactive controls would be available in full mode',
+                'learning_goals': ['Physics concepts', 'Interactive learning']
+            }
+        
+        def run_game_step(self, game_name, action=None):
+            return None
 
 
 class StreamlitGameRunner:

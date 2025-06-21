@@ -4,16 +4,20 @@ Replaces NVIDIA Modulus with CPU-optimized physics simulations
 """
 
 import numpy as np
-import torch
-import torch.nn as nn
 from typing import Dict, List, Tuple, Optional, Union, Any
 import logging
 from pathlib import Path
-import joblib
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.neural_network import MLPRegressor
-from sklearn.preprocessing import StandardScaler
 import pickle
+
+# Try to import optional ML libraries
+try:
+    from sklearn.ensemble import RandomForestRegressor
+    from sklearn.neural_network import MLPRegressor
+    from sklearn.preprocessing import StandardScaler
+    import joblib
+    SKLEARN_AVAILABLE = True
+except ImportError:
+    SKLEARN_AVAILABLE = False
 
 logger = logging.getLogger(__name__)
 
