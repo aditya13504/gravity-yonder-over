@@ -1,0 +1,66 @@
+# Core Framework
+streamlit>=1.32.0
+fastapi>=0.104.0
+uvicorn>=0.24.0
+gunicorn>=21.2.0
+
+# Scientific Computing
+numpy>=1.24.3
+scipy>=1.10.1
+pandas>=2.0.3
+matplotlib>=3.7.0
+plotly>=5.18.0
+
+# Physics and Simulation
+numba>=0.57.1
+sympy>=1.12
+
+# Machine Learning & AI
+torch>=2.1.0
+torchvision>=0.16.0
+scikit-learn>=1.3.0
+
+# GPU Computing (Optional)
+cupy-cuda12x>=12.2.0; sys_platform != "darwin"
+cudf-cu12>=23.10.0; sys_platform != "darwin"
+cuquantum-python>=23.08.0; sys_platform != "darwin"
+
+# NVIDIA Modulus (Optional - requires separate installation)
+# modulus>=0.3.0
+
+# NVIDIA NeMo and Morpheus (Optional)
+nemo-toolkit>=1.20.0; sys_platform != "darwin"
+# morpheus>=23.08.0
+
+# Database
+sqlalchemy>=2.0.0
+alembic>=1.12.0
+redis>=5.0.0
+
+# API and Web
+pydantic>=2.4.0
+jinja2>=3.1.0
+aiofiles>=23.2.0
+python-multipart>=0.0.6
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
+httpx>=0.25.0
+
+# Development
+black>=23.9.0
+flake8>=6.1.0
+mypy>=1.6.0
+
+# Deployment
+docker>=6.1.0
+python-dotenv>=1.0.0
+
+# Image Processing
+Pillow>=10.0.0
+
+# Utilities
+tqdm>=4.66.0
+requests>=2.31.0

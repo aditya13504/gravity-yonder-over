@@ -1,0 +1,92 @@
+/* Dark Theme */
+.theme-dark {
+  --primary-color: #0066cc;
+  --secondary-color: #004499;
+  --accent-color: #00ff88;
+  --background-color: #000011;
+  --surface-color: #111122;
+  --text-color: #ffffff;
+  --text-secondary: #cccccc;
+  --border-color: #333344;
+  --error-color: #ff4444;
+  --warning-color: #ffaa00;
+  --success-color: #00ff44;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #0066cc, #004499);
+  --gradient-accent: linear-gradient(135deg, #00ff88, #00cc66);
+  --gradient-space: linear-gradient(180deg, #000011, #001122);
+  
+  /* Shadows */
+  --shadow-small: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --shadow-large: 0 8px 16px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 20px rgba(0, 255, 136, 0.3);
+  
+  /* Animations */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-medium: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+}
+
+/* Light Theme */
+.theme-light {
+  --primary-color: #0066cc;
+  --secondary-color: #0088ff;
+  --accent-color: #00aa44;
+  --background-color: #f5f5f5;
+  --surface-color: #ffffff;
+  --text-color: #333333;
+  --text-secondary: #666666;
+  --border-color: #dddddd;
+  --error-color: #cc0000;
+  --warning-color: #ff8800;
+  --success-color: #00aa00;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #0066cc, #0088ff);
+  --gradient-accent: linear-gradient(135deg, #00aa44, #00cc66);
+  --gradient-space: linear-gradient(180deg, #f5f5f5, #e5e5e5);
+  
+  /* Shadows */
+  --shadow-small: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.15);
+  --shadow-large: 0 8px 16px rgba(0, 0, 0, 0.2);
+  --shadow-glow: 0 0 20px rgba(0, 170, 68, 0.2);
+  
+  /* Animations */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-medium: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+}
+
+/* High Contrast Theme */
+.theme-high-contrast {
+  --primary-color: #ffffff;
+  --secondary-color: #ffff00;
+  --accent-color: #00ffff;
+  --background-color: #000000;
+  --surface-color: #111111;
+  --text-color: #ffffff;
+  --text-secondary: #ffff00;
+  --border-color: #ffffff;
+  --error-color: #ff0000;
+  --warning-color: #ffff00;
+  --success-color: #00ff00;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #ffffff, #ffff00);
+  --gradient-accent: linear-gradient(135deg, #00ffff, #00ff00);
+  --gradient-space: linear-gradient(180deg, #000000, #111111);
+  
+  /* Shadows */
+  --shadow-small: 0 2px 4px rgba(255, 255, 255, 0.3);
+  --shadow-medium: 0 4px 8px rgba(255, 255, 255, 0.4);
+  --shadow-large: 0 8px 16px rgba(255, 255, 255, 0.5);
+  --shadow-glow: 0 0 20px rgba(0, 255, 255, 0.5);
+  
+  /* Animations */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-medium: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+}

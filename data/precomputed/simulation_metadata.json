@@ -1,0 +1,22 @@
+{
+  "binary_orbit": {
+    "scenario_id": "binary_orbit",
+    "physics_type": "newtonian",
+    "parameters": {
+      "mass1": 1e+30,
+      "mass2": 5.97e+24,
+      "separation": 150000000000.0,
+      "domain_size": 300000000000.0,
+      "time_span": 31557600.0
+    },
+    "grid_resolution": [
+      32,
+      32,
+      16
+    ],
+    "time_steps": 0,
+    "computation_time": 0.03854799270629883,
+    "file_path": "binary_orbit_32x32x16.pkl",
+    "created_at": "2025-06-20 23:38:19"
+  }
+}
