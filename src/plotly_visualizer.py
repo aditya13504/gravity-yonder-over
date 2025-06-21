@@ -168,16 +168,12 @@ class PhysicsVisualizer:
         if physics_type == "relativistic" and "schwarzschild_radius" in simulation_data:
             rs = simulation_data["schwarzschild_radius"]
             fig.add_trace(self._create_event_horizon(rs))
+          # Update layout
+        layout_dict = dict(self.default_layout)
+        layout_dict["title"] = f"3D {visualization_type.title()} Field - {physics_type.title()} Physics"
+        layout_dict["scene"]["aspectmode"] = "cube"
         
-        # Update layout
-        fig.update_layout(
-            **self.default_layout,
-            title=f"3D {visualization_type.title()} Field - {physics_type.title()} Physics",
-            scene=dict(
-                **self.default_layout["scene"],
-                aspectmode="cube"
-            )
-        )
+        fig.update_layout(layout_dict)
         
         return fig
     
@@ -276,13 +272,13 @@ class PhysicsVisualizer:
                     trail_z = traj_data[trail_start:time_idx+1, 2]
                     
                     # Trail trace
-                    frame_data.append(
-                        go.Scatter3d(
+                    frame_data.append(                        go.Scatter3d(
                             x=trail_x,
                             y=trail_y,
                             z=trail_z,
                             mode='lines',
-                            line=dict(color=traj["color"], width=2, opacity=0.6),
+                            line=dict(color=traj["color"], width=2),
+                            opacity=0.6,
                             name=f"{traj['name']} Trail",
                             showlegend=frame_idx == 0
                         )

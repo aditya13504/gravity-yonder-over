@@ -18,5 +18,73 @@
     "computation_time": 0.03854799270629883,
     "file_path": "binary_orbit_32x32x16.pkl",
     "created_at": "2025-06-20 23:38:19"
+  },
+  "gravitational_waves": {
+    "scenario_id": "gravitational_waves",
+    "physics_type": "relativistic",
+    "parameters": {
+      "mass1": 5.967e+31,
+      "mass2": 3.978e+31,
+      "initial_separation": 1000000.0,
+      "domain_size": 1000000.0,
+      "time_span": 1.0
+    },
+    "grid_resolution": [
+      64,
+      64,
+      32
+    ],
+    "time_steps": 0,
+    "computation_time": 0.06679606437683105,
+    "file_path": "gravitational_waves_64x64x32.pkl",
+    "created_at": "2025-06-21 07:55:05"
+  },
+  "planetary_system": {
+    "scenario_id": "planetary_system",
+    "physics_type": "orbital",
+    "parameters": {
+      "central_mass": 1.989e+30,
+      "planet_masses": [
+        3.3e+23,
+        4.87e+24,
+        5.97e+24,
+        6.39e+23
+      ],
+      "planet_distances": [
+        58000000000.0,
+        108000000000.0,
+        150000000000.0,
+        228000000000.0
+      ],
+      "domain_size": 500000000000.0,
+      "time_span": 63115200.0
+    },
+    "grid_resolution": [
+      48,
+      48,
+      24
+    ],
+    "time_steps": 0,
+    "computation_time": 0.10660052299499512,
+    "file_path": "planetary_system_48x48x24.pkl",
+    "created_at": "2025-06-21 08:00:06"
+  },
+  "black_hole_accretion": {
+    "scenario_id": "black_hole_accretion",
+    "physics_type": "relativistic",
+    "parameters": {
+      "black_hole_mass": 1.989e+31,
+      "domain_size": 1000000000000.0,
+      "time_span": 1000
+    },
+    "grid_resolution": [
+      64,
+      64,
+      32
+    ],
+    "time_steps": 0,
+    "computation_time": 0.012157440185546875,
+    "file_path": "black_hole_accretion_64x64x32.pkl",
+    "created_at": "2025-06-21 08:40:09"
   }
 }

@@ -15,8 +15,8 @@ from typing import Dict, List, Tuple, Optional, Any
 import time
 import hashlib
 from dataclasses import dataclass
-from .modulus_physics import ModulusGravityEngine
-from .cudf_processor import CuDFDataProcessor
+from .cpu_physics_engine import ModulusGravityEngine
+from .cpu_data_processor import CuDFDataProcessor
 
 
 @dataclass

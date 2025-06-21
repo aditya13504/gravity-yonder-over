@@ -6,7 +6,6 @@ Trains trajectory prediction models with CPU-only processing
 import torch
 import torch.nn as nn
 import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
 from pathlib import Path
 from sklearn.ensemble import RandomForestRegressor

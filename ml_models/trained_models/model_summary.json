@@ -1,0 +1,28 @@
+{
+  "timestamp": "2025-06-21 07:31:42.386810",
+  "framework": "CPU-based scikit-learn + PyTorch",
+  "models_trained": [
+    "random_forest",
+    "mlp",
+    "pytorch_trajectory"
+  ],
+  "performance_metrics": {
+    "random_forest": {
+      "mse": 2.701088274583363e+22,
+      "r2": 0.678750401890026
+    },
+    "mlp": {
+      "mse": 1.4442705898583752e+22,
+      "r2": 0.7847609852195663
+    }
+  },
+  "model_files": [
+    "mlp_model.pkl",
+    "mlp_scaler_x.pkl",
+    "mlp_scaler_y.pkl",
+    "random_forest_model.pkl",
+    "random_forest_scaler_x.pkl",
+    "random_forest_scaler_y.pkl",
+    "pytorch_trajectory_model.pth"
+  ]
+}
